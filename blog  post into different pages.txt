@@ -1,0 +1,83 @@
+   <style>
+    .post-pagination {
+        margin: 20px auto;
+        text-align: center;
+        width: 100%;
+    }
+    .button_1, .button_2, .button_3 {
+        border: 2px solid #f4655f;
+        font-weight: 900;
+        padding: 6px 36px;
+        color:#f4655f;
+        transition:ease 0.69s !important;
+    }
+    .button_1:hover, .button_2:hover, .button_3:hover {
+        background: none repeat scroll 0 0 #f4655f;
+        color: #fff;
+        text-decoration: none;
+    }
+    </style>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+    jQuery('.button_1').click(function(){
+    jQuery('.content_1').fadeIn('slow');
+      jQuery('.content_2').fadeOut('fast');
+    jQuery('.content_3').fadeOut('fast');
+    jQuery(this).css('background','#F4655F');
+    jQuery(this).css('color','#fff');
+    jQuery('.button_2').css('background','#fff');
+    jQuery('.button_2').css('color','#F4655F');
+    jQuery('.button_3').css('background','#fff');
+    jQuery('.button_3').css('color','#F4655F');
+    return false;
+    });
+    jQuery('.button_2').click(function(){
+    jQuery('.content_1').fadeOut('fast');
+      jQuery('.content_2').fadeIn('slow');
+    jQuery('.content_3').fadeOut('fast');
+    jQuery(this).css('background','#F4655F');
+    jQuery(this).css('color','#fff');
+    jQuery('.button_1').css('background','#fff');
+    jQuery('.button_1').css('color','#F4655F');
+    jQuery('.button_3').css('background','#fff');
+    jQuery('.button_3').css('color','#F4655F');
+    return false;
+    });
+    jQuery('.button_3').click(function(){
+    jQuery('.content_1').fadeOut('fast');
+      jQuery('.content_2').fadeOut('fast');
+    jQuery('.content_3').fadeIn('slow');
+    jQuery(this).css('background','#F4655F');
+    jQuery(this).css('color','#fff');
+    jQuery('.button_1').css('background','#fff');
+    jQuery('.button_1').css('color','#F4655F');
+    jQuery('.button_2').css('background','#fff');
+    jQuery('.button_2').css('color','#F4655F');
+    return false;
+    });
+    });
+    </script>
+
+    <div class="content_1">
+
+    Add content here
+
+    </div>
+
+    <div class="content_2" style="display: none;">
+
+    Add content here
+
+    </div>
+
+    <div class="content_3" style="display: none;">
+
+    Add content here
+
+    </div>
+
+    <div class="post-pagination">
+    <a class="button_1" href="#">1</a>
+    <a class="button_2" href="#">2</a>
+    <a class="button_3" href="#">3</a>
+    </div>
