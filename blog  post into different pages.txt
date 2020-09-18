@@ -1,83 +1,109 @@
-   <style>
-    .post-pagination {
-        margin: 20px auto;
-        text-align: center;
-        width: 100%;
-    }
-    .button_1, .button_2, .button_3 {
-        border: 2px solid #f4655f;
-        font-weight: 900;
-        padding: 6px 36px;
-        color:#f4655f;
-        transition:ease 0.69s !important;
-    }
-    .button_1:hover, .button_2:hover, .button_3:hover {
-        background: none repeat scroll 0 0 #f4655f;
-        color: #fff;
-        text-decoration: none;
-    }
-    </style>
-    <script type="text/javascript">
-    jQuery(document).ready(function(){
-    jQuery('.button_1').click(function(){
-    jQuery('.content_1').fadeIn('slow');
-      jQuery('.content_2').fadeOut('fast');
-    jQuery('.content_3').fadeOut('fast');
-    jQuery(this).css('background','#F4655F');
-    jQuery(this).css('color','#fff');
-    jQuery('.button_2').css('background','#fff');
-    jQuery('.button_2').css('color','#F4655F');
-    jQuery('.button_3').css('background','#fff');
-    jQuery('.button_3').css('color','#F4655F');
-    return false;
-    });
-    jQuery('.button_2').click(function(){
-    jQuery('.content_1').fadeOut('fast');
-      jQuery('.content_2').fadeIn('slow');
-    jQuery('.content_3').fadeOut('fast');
-    jQuery(this).css('background','#F4655F');
-    jQuery(this).css('color','#fff');
-    jQuery('.button_1').css('background','#fff');
-    jQuery('.button_1').css('color','#F4655F');
-    jQuery('.button_3').css('background','#fff');
-    jQuery('.button_3').css('color','#F4655F');
-    return false;
-    });
-    jQuery('.button_3').click(function(){
-    jQuery('.content_1').fadeOut('fast');
-      jQuery('.content_2').fadeOut('fast');
-    jQuery('.content_3').fadeIn('slow');
-    jQuery(this).css('background','#F4655F');
-    jQuery(this).css('color','#fff');
-    jQuery('.button_1').css('background','#fff');
-    jQuery('.button_1').css('color','#F4655F');
-    jQuery('.button_2').css('background','#fff');
-    jQuery('.button_2').css('color','#F4655F');
-    return false;
-    });
-    });
-    </script>
+<!-- Go to Blogger account and choose a blog where you want to add break paginate system.
 
-    <div class="content_1">
+Now go to Template>Edit HTML and here you need to search for jQuear source link that will be in <head>. If there is no link available similar to the given link, then copy-paste this code under the <head> tag to enable jQuery libratory.  -->
 
-    Add content here
 
-    </div>
 
-    <div class="content_2" style="display: none;">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
-    Add content here
 
-    </div>
 
-    <div class="content_3" style="display: none;">
+<!-- Now you need to search ]]></b:skin> tag in the Template Editor and then paste the following code before this closing tag.
+-->
 
-    Add content here
 
-    </div>
+.post-pagination {
+margin: 40px auto;
+text-align: center;
+width: 100%;
+float:left;
+}
+.button_1, .button_2, .button_3 {
+border: 2px solid #f4655f;
+font-weight: 900;
+padding: 6px 36px;
+color:#f4655f;
+transition:ease 0.69s !important;
+}
+.button_1:hover, .button_2:hover, .button_3:hover {
+background: none repeat scroll 0 0 #f4655f;
+color: #fff;
+text-decoration: none;
+}
 
-    <div class="post-pagination">
-    <a class="button_1" href="#">1</a>
-    <a class="button_2" href="#">2</a>
-    <a class="button_3" href="#">3</a>
-    </div>
+The following CSS is used to give the style to the break paginate style. You can customize it according to your template design by changing the CSS code only.
+
+Now again search </head> in your template editor and paste the following jQuery script above it.
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+jQuery('.button_1').click(function(){
+jQuery('.content_1').fadeIn('slow');
+jQuery('.content_2').fadeOut('fast');
+jQuery('.content_3').fadeOut('fast');
+jQuery(this).css('background','#F4655F');
+jQuery(this).css('color','#fff');
+jQuery('.button_2').css('background','#fff');
+jQuery('.button_2').css('color','#F4655F');
+jQuery('.button_3').css('background','#fff');
+jQuery('.button_3').css('color','#F4655F');
+return false;
+});
+jQuery('.button_2').click(function(){
+jQuery('.content_1').fadeOut('fast');
+jQuery('.content_2').fadeIn('slow');
+jQuery('.content_3').fadeOut('fast');
+jQuery(this).css('background','#F4655F');
+jQuery(this).css('color','#fff');
+jQuery('.button_1').css('background','#fff');
+jQuery('.button_1').css('color','#F4655F');
+jQuery('.button_3').css('background','#fff');
+jQuery('.button_3').css('color','#F4655F');
+return false;
+});
+jQuery('.button_3').click(function(){
+jQuery('.content_1').fadeOut('fast');
+jQuery('.content_2').fadeOut('fast');
+jQuery('.content_3').fadeIn('slow');
+jQuery(this).css('background','#F4655F');
+jQuery(this).css('color','#fff');
+jQuery('.button_1').css('background','#fff');
+jQuery('.button_1').css('color','#F4655F');
+jQuery('.button_2').css('background','#fff');
+jQuery('.button_2').css('color','#F4655F');
+return false;
+});
+});
+</script>
+
+
+
+
+<!-- Save it. Now we have added all functions of post break up in blogger template. It's time to call the function in the Blogger post.
+
+Before breaking the post, I want to show you another way to add the javascript and CSS. There is another way to add Javascript and CSS in the blogger template that will not remove when you will change the template of your blog.
+
+First of all, you need to add some tag before and after the codes. For CSS use the following tag.
+
+<style>CSS Here</Style>
+
+Now go to Layout of your template and click on Add Gadget. Select HTML/Javascript and paste CSS code with start and close tag. And now you can also be able to paste javascript functions in it. Now whenever you change the template, it will remain in its position.
+
+So, when every you want to break the post into multiple pages then use the following HTML codes in the blogspot template.  -->
+
+
+
+<div class="content_1">
+Add Content Here
+</div>
+<div class="content_2" style="display: none;">
+Add Content Here
+</div>
+<div class="content_3" style="display: none;">
+Add Content Here
+</div>
+<div class="post-pagination">
+<a class="button_1" href="#">1</a>
+<a class="button_2" href="#">2</a>
+<a class="button_3" href="#">3</a>
+</div>
